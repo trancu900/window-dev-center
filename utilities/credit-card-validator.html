@@ -24,7 +24,7 @@
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
 
-<div id="title">
+<!-- <div id="title">
 <div class="top-logo" style="height: 45px;">
 <a href="https://www.utilities-online.info/"><img id="logo" style="height: 40px;" data-src="https://www.utilities-online.info/assets/images/logo.png?v=1.0.0"></img><span class="titletext">Utilities Online</span></a>
 <img data-src="https://www.utilities-online.info/assets/images/menu.png" class="menu_button" onclick="openmenu()">
@@ -71,7 +71,7 @@
 </div>
 </div>
 
-</div>
+</div> -->
 <script>
     window.addEventListener("load",function(){var html = document.getElementsByClassName("menu_url")[0].innerHTML;document.getElementsByClassName("menu_url")[1].style.display = "flex";document.getElementsByClassName("menu_url")[1].innerHTML = html;});document.addEventListener('click', function(event) {var searchbutton = document.getElementsByClassName('search-button')[0];var searchinput = document.getElementsByClassName('search-input')[1];var targetbutton = searchbutton.contains(event.target);var targetinput = searchinput.contains(event.target);if (!targetbutton && !targetinput) {closesearch(1);}});function searchnow(i){document.getElementsByClassName("search-button")[0].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "block";document.getElementsByClassName("search-input")[i].style.display = "block";document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("search-input")[i].focus();}function closesearch(i){document.getElementsByClassName("search-button")[0].style.display = "block";document.getElementsByClassName("close-button")[i].style.display = "none";document.getElementsByClassName("search-input")[i].style.display = "none";document.getElementsByClassName("result-box")[i].style.display = "none";}function clearsearch(i){document.getElementsByClassName("search-input")[i].value = "";document.getElementsByClassName("result-box")[i].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "none";}function searchmykeyword(i){var search_input = document.getElementsByClassName("search-input")[i];if(search_input.value.length > 0){document.getElementsByClassName("close-button")[i].style.display = "block";}var request = new XMLHttpRequest();request.open("GET", "frontend/search?search="+search_input.value, true);request.setRequestHeader("Content-Type", "application/json;  charset=UTF-8");request.onreadystatechange = function() {if (request.readyState == XMLHttpRequest.DONE) {if (request.status == 200) {var gethtml = "";JSON.parse(request.response).forEach(function(res){gethtml += '<a href="'+base_url+res.tool_slug+'"><li>'+res.tool_title+'</li></a>';});document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("result-box")[i].innerHTML = gethtml;} else {console.log("error");}}};request.send();}function openmenu(){if (document.getElementsByClassName("header-menu-mobile")[0].style.display != "block") {document.getElementsByClassName("header-menu-mobile")[0].style.display = "block";}else{document.getElementsByClassName("header-menu-mobile")[0].style.display = "none";}}
 </script>
@@ -86,10 +86,10 @@
 <div class="text-sec">
 <form id="form" class="form-inline" novalidate="novalidate">
 <div class="col-md-12">
-<h1><strong>Card Validator</strong></h1>
+<!-- <h1><strong>Card Validator</strong></h1>
 <div class="row text-center">
 <div id="home_top_a" class="default_a" style="max-width: 728px;height: 90px;">
-</div>
+</div> -->
 </div>
 <div class="input-box">
 <div class="col-sm-6 from-sec clear p-0" style="margin-top:0px;text-align: left;">
@@ -170,10 +170,10 @@
 </div>
 </div>
 </div>
-<div class="row text-center">
+<!-- <div class="row text-center">
 <div id="home_bottom_a" class="default_a" style="max-width: 336px;height: 280px;">
 </div>
-</div>
+</div> -->
 </div> <style>
 			.hover_links{margin-left:5px;color:#17a2b8}
 			.hover_links:hover{text-decoration-line: underline !important;}
@@ -187,7 +187,7 @@
 				.flex_utilities_tools{width: 92%;margin-top: 15px;}
 			}
 		</style>
-<div class="col-md-12 container flex_utilities">
+<!-- <div class="col-md-12 container flex_utilities">
 <div class="flex_utilities_content"><h2 style="text-align:center" id="card-validator">Card Validator</h2> <p>Credit card numbers are produced in accordance with specific rules.&nbsp;<br /> It provides a method for merchants to verify the validity of a card number before accepting payment from customers.</p> <p>The Card Validator Tool is here to assist you to check valid credit and debit card numbers that you can apply to different sites.</p> <p>This tool provides you with all the details of the <a href="https://www.utilities-online.info/credit-card-generator">credit card</a> that you can verify and ensure that your card is legitimate.</p> <h2 id="how-this-tool-validates-credit-cards">How this tool validates credit cards?</h2> <p>Our tool has a Luhn&#39;s algorithm validator, which will confirm your card number according to Luhn&#39;s algorithm.</p> <h3>This tool validates the following primary elements:</h3> <ul> <li>Personal account number which starts from digit number 7.</li> <li>Major industry identifier which is the first digit of the credit card number.</li> <li>Issuer identification number which ranges from digit number 1 to 6.</li> <li>Apply Luhn&rsquo;s algorithm to verify if the complete number is valid according to credit card number rules.</li> </ul> <h2 id="how-to-use-this-card-validator">How to use this card validator?</h2> <p>Follow the given steps to verify the validity of your credit/debit card number:</p> <ul> <li>First of all, you must have a credit card/debit card number ready for verification.&nbsp;</li> <li>Enter your number in the field that came with the tool.&nbsp;</li> <li>Now, click the &ldquo;Validate Card&rdquo; button.&nbsp;</li> <li>The credit card validator will show you the details of the card.</li> </ul> <h3>Uses of card validators</h3> <p>You can get assistance from the credit card verification tool to verify the validity of your credit card or debit card number.&nbsp;</p> <p>Nowadays, many websites and platforms request you to enter your card information when you check-in.<br /> So, if you have a valid card number, you can proceed without any trouble.</p> <p>Once you enter your card number, you can pay for the service you are looking for on the internet.<br /> These services can be a cell phone, electricity, water, tuition services online, etc.</p> <p>You can make cash withdrawals as well if you need.</p> <p>You can use your credit card responsibly and enjoy the benefits it brings.</p> <h2 id="card-type-support">Card Type Support</h2> <p>Following are the card types you can verify on our tool:</p> <ol> <li>Diners Club</li> <li>American Express</li> <li>JCB</li> <li>Discover</li> <li>Visa Card</li> <li>Master Card</li> </ol> <h2 id="do-we-store-the-information-on-your-card">Do we store the information on your card?&nbsp;</h2> <p>This tool does not store data or any kind of information on its server-side, which means that the credit card numbers you entered will not be saved.&nbsp;</p> <p>For security and copyright issues, websites are not permitted to gather any credit card information entered by the consumer.&nbsp;</p> <p>That is why our card validator has been proved to be a safe tool for users.</p></div>
 <div class="flex_utilities_tools">
 <div class="flex_color">
@@ -226,7 +226,7 @@
 <div>
 <a href="https://www.utilities-online.info/blogs">Blogs</a> | <a href="https://www.utilities-online.info/contact">Contact Us</a> | <a href="https://www.utilities-online.info/faqs">FAQs</a> | <a href="https://www.utilities-online.info/privacy-policy">Privacy Policy</a>
 </div>
-</div>
+</div> -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190772945-1"></script>
 <script>

@@ -24,7 +24,7 @@
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
 
-<div id="title">
+<!-- <div id="title">
 <div class="top-logo" style="height: 45px;">
 <a href="https://www.utilities-online.info/"><img id="logo" style="height: 40px;" data-src="https://www.utilities-online.info/assets/images/logo.png?v=1.0.0"></img><span class="titletext">Utilities Online</span></a>
 <img data-src="https://www.utilities-online.info/assets/images/menu.png" class="menu_button" onclick="openmenu()">
@@ -71,7 +71,7 @@
 </div>
 </div>
  
-</div>
+</div> -->
 <script>
     window.addEventListener("load",function(){var html = document.getElementsByClassName("menu_url")[0].innerHTML;document.getElementsByClassName("menu_url")[1].style.display = "flex";document.getElementsByClassName("menu_url")[1].innerHTML = html;});document.addEventListener('click', function(event) {var searchbutton = document.getElementsByClassName('search-button')[0];var searchinput = document.getElementsByClassName('search-input')[1];var targetbutton = searchbutton.contains(event.target);var targetinput = searchinput.contains(event.target);if (!targetbutton && !targetinput) {closesearch(1);}});function searchnow(i){document.getElementsByClassName("search-button")[0].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "block";document.getElementsByClassName("search-input")[i].style.display = "block";document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("search-input")[i].focus();}function closesearch(i){document.getElementsByClassName("search-button")[0].style.display = "block";document.getElementsByClassName("close-button")[i].style.display = "none";document.getElementsByClassName("search-input")[i].style.display = "none";document.getElementsByClassName("result-box")[i].style.display = "none";}function clearsearch(i){document.getElementsByClassName("search-input")[i].value = "";document.getElementsByClassName("result-box")[i].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "none";}function searchmykeyword(i){var search_input = document.getElementsByClassName("search-input")[i];if(search_input.value.length > 0){document.getElementsByClassName("close-button")[i].style.display = "block";}var request = new XMLHttpRequest();request.open("GET", "frontend/search?search="+search_input.value, true);request.setRequestHeader("Content-Type", "application/json;  charset=UTF-8");request.onreadystatechange = function() {if (request.readyState == XMLHttpRequest.DONE) {if (request.status == 200) {var gethtml = "";JSON.parse(request.response).forEach(function(res){gethtml += '<a href="'+base_url+res.tool_slug+'"><li>'+res.tool_title+'</li></a>';});document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("result-box")[i].innerHTML = gethtml;} else {console.log("error");}}};request.send();}function openmenu(){if (document.getElementsByClassName("header-menu-mobile")[0].style.display != "block") {document.getElementsByClassName("header-menu-mobile")[0].style.display = "block";}else{document.getElementsByClassName("header-menu-mobile")[0].style.display = "none";}}
 </script>
@@ -83,11 +83,11 @@
 <div class="text-center custom_tool_box m-0 text-left" style="padding-left: 20px;padding-right: 20px;">
 <form autocomplete="off" name="calcform">
 <div class="col-md-12">
-<h1 class="text-center">Backwards Text Generator</h1>
+<!-- <h1 class="text-center">Backwards Text Generator</h1>
 <p style="text-align: center;">Enter your text in the input box of the backwards text generator and press the "generate" button to generate reverse text</p>
-<div class="text-center">
-<div id="home_top_a" class="default_a" style="max-width: 728px;height: 90px;">
-</div>
+<div class="text-center"> -->
+<!-- <div id="home_top_a" class="default_a" style="max-width: 728px;height: 90px;">
+</div> -->
 </div><div class="row">
 <div class="col-sm-5">
 <div class="icons-main">
@@ -101,10 +101,10 @@
 <span style="color: #eeeeee;letter-spacing: 2.4px;"><i>Sample</i></span>
 </span>
 <textarea id="sampledata" style="display: none;">Welcome to Utilities</textarea>
-<span class="textarea-buttons tooltip" onclick="uploadfile()">
+<!-- <span class="textarea-buttons tooltip" onclick="uploadfile()">
 <span class="tooltiptext" style="bottom: 140%;">Upload File</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/upload.svg?ver=1.1" />
-</span>
+</span> -->
 <span class="textarea-buttons tooltip" onclick="deleteinputdata()">
 <span class="tooltiptext" style="bottom: 140%;">Clear</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/erase.svg" />
@@ -123,10 +123,10 @@
 </select>
 <button style="margin-left: auto;margin-right: auto;" type="button" onclick="generatetext()" class="btn">Generate</button>
 </div>
-<div class="text-center">
+<!-- <div class="text-center">
 <div id="home_middle_a" class="default_a" style="width: 200px;height: 200px;">
 </div>
-</div>
+</div> -->
 </div>
 <div class="col-sm-5" id="output-box">
 <div class="icons-main">
@@ -135,14 +135,14 @@
 <span><label style="color:#ffffff;opacity: 0.9;letter-spacing: 1.5px;left: 0px !important;">Output</label></span>
 </div>
 <div>
-<span class="textarea-buttons tooltip" onclick="save_file()">
+<!-- <span class="textarea-buttons tooltip" onclick="save_file()">
 <span class="tooltiptext">Download</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/save.svg?ver=1.1" />
-</span>
-<span class="textarea-buttons tooltip" onclick="copy_output()">
+</span> -->
+<!-- <span class="textarea-buttons tooltip" onclick="copy_output()">
 <span class="tooltiptext copied">Copy</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/copy.svg" />
-</span>
+</span> -->
 <span class="textarea-buttons tooltip" onclick="deleteoutputdata()">
 <span class="tooltiptext">Clear</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/erase.svg" />
@@ -155,10 +155,10 @@
 </div>
 </div>
 </form>
-<div class="text-center" style="display: inline-block;width: 100%;">
+<!-- <div class="text-center" style="display: inline-block;width: 100%;">
 <div id="home_bottom_a" class="default_a" style="max-width: 728px;height: 90px;">
 </div>
-</div>
+</div> -->
 </div>
 <script>var ads_time = 0;</script>
 <script>
@@ -242,7 +242,7 @@ function alert_box_close(){
 				.flex_utilities_tools{width: 92%;margin-top: 15px;}
 			}
 		</style>
-<div class="col-md-12 container flex_utilities">
+<!-- <div class="col-md-12 container flex_utilities">
 <div class="flex_utilities_content"><p>The backward text generator enables you to reverse any text at one click.</p> <p>It provides an option to reverse each letter of the written text and allows you to convert the given data into the backward version of the original one.</p> <p>The converter takes the input like <strong>XYZ</strong> and reverses the letter order as <strong>ZYX</strong>.</p> <h2 id="how-to-use-reverse-text-generator">How to use Reverse Text Generator?</h2> <p>To use this reverser, follow the steps below:</p> <ol> <li>Type or paste the text in the input box.</li> <li>Select the desired function from the given options.</li> </ol> <p>Once you click the button, it will quickly perform the selected function and displays accurate results.</p> <h2 id="how-backwards-text-generator-works">How Backwards Text Generator Works?</h2> <p>Our text reverser comes with four useful key features i.e. reverse letters, reverse wording, reverse each word&rsquo;s lettering, and text selection.</p> <p>To check their work, let&rsquo;s have a look at few examples.</p> <p>If you type &ldquo;This is the right word&rdquo;, and select the <strong>Reverse Text option</strong>, the result will be:</p> <p style="text-align:center">&ldquo;<strong>drow thgir eht si sihT</strong>&rdquo;&nbsp;</p> <p>This function changes the position and characters of written words from left to right with one click.</p> <p>If you enter &ldquo;This is the right word&rdquo; and select the <strong>Reverse Wording</strong> function, the output will be:</p> <p style="text-align:center">&ldquo;<strong>word right the is This</strong>&rdquo;</p> <p>This feature changes the sentence structure and position of written words from left to right.<br /> And if you type or paste the text &ldquo;This is the right word&rdquo; and select the <strong>Reverse Each Word&rsquo;s Lettering</strong>, the result will be:</p> <p style="text-align:center">&ldquo;<strong>Siht si eht thgir drow</strong>&rdquo;</p> <p>This function doesn&rsquo;t change the sentence structure of the written document.<br /> It only reverses the letters of the written sentence within a fraction of seconds.</p> <p>The fourth option of the reverse text generator tool gives an option to <strong>select</strong> all the backwards letters at one click.</p> <h2 id="notable-examples-about-reverse-text">Notable Examples about Reverse Text</h2> <p><a href="https://www.mos.org/leonardo/activities/mirror-writing" rel="nofollow" target="_blank">Leonardo Da Vinci</a> was an Italian Polymath, considered as one of the most talented individuals ever lived.</p> <p>He wrote most of his important notes using <a href="https://www.utilities-online.info/mirror-text-generator">mirror writing</a> to make it difficult for readers to read and steal his ideas.</p> <p>The Calligrams or pictorial text arranged in mirror symmetry were famous in the <a href="https://www.history.com/topics/middle-east/ottoman-empire" rel="nofollow" target="_blank">Ottoman Empire</a>.</p> <p>The pictorial text in the 18th and 19h centuries were used to deliver secrets and private information.</p> <h2 id="uses-of-reverse-text-tool">Uses of Reverse Text Tool</h2> <p>The backward text or mirror writing is being used on different platforms for multiple purposes.</p> <p>The main uses of the online word reverser are as follows:</p> <h3>Social Media Platforms</h3> <p>People on different social media platforms can use this utility to make their <a href="https://www.facebook.com/" rel="nofollow" target="_blank">Facebook</a> and <a href="https://twitter.com/" rel="nofollow" target="_blank">Twitter</a> posts attractive.</p> <h3>Ambulance Mirror Writing</h3> <p>The word AMBULANCE is written backward as ECNALUBMA on the front side of the vehicles.</p> <p><a href="https://ux.stackexchange.com/questions/52407/why-ambulance-is-written-as-ecnalubma-on-emergency-vehicles" rel="nofollow" target="_blank">This increases the understandability</a> of the drivers when they see emergency vehicles coming behind their automobiles.</p> <h3>Data Security</h3> <p>Our reverse text utility can help users to create strong passwords with its useful features.<br /> It helps them to secure their accounts by generating reverse text passwords in no time.</p></div>
 <div class="flex_utilities_tools">
 <div class="flex_color">
@@ -281,7 +281,7 @@ function alert_box_close(){
 <div>
 <a href="https://www.utilities-online.info/blogs">Blogs</a> | <a href="https://www.utilities-online.info/contact">Contact Us</a> | <a href="https://www.utilities-online.info/faqs">FAQs</a> | <a href="https://www.utilities-online.info/privacy-policy">Privacy Policy</a>
 </div>
-</div>
+</div> -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190772945-1"></script>
 <script>

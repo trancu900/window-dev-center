@@ -24,7 +24,7 @@
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
 
-<div id="title">
+<!-- <div id="title">
 <div class="top-logo" style="height: 45px;">
 <a href="https://www.utilities-online.info/"><img id="logo" style="height: 40px;" data-src="https://www.utilities-online.info/assets/images/logo.png?v=1.0.0"></img><span class="titletext">Utilities Online</span></a>
 <img data-src="https://www.utilities-online.info/assets/images/menu.png" class="menu_button" onclick="openmenu()">
@@ -71,7 +71,7 @@
 </div>
 </div>
 
-</div>
+</div> -->
 <script>
     window.addEventListener("load",function(){var html = document.getElementsByClassName("menu_url")[0].innerHTML;document.getElementsByClassName("menu_url")[1].style.display = "flex";document.getElementsByClassName("menu_url")[1].innerHTML = html;});document.addEventListener('click', function(event) {var searchbutton = document.getElementsByClassName('search-button')[0];var searchinput = document.getElementsByClassName('search-input')[1];var targetbutton = searchbutton.contains(event.target);var targetinput = searchinput.contains(event.target);if (!targetbutton && !targetinput) {closesearch(1);}});function searchnow(i){document.getElementsByClassName("search-button")[0].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "block";document.getElementsByClassName("search-input")[i].style.display = "block";document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("search-input")[i].focus();}function closesearch(i){document.getElementsByClassName("search-button")[0].style.display = "block";document.getElementsByClassName("close-button")[i].style.display = "none";document.getElementsByClassName("search-input")[i].style.display = "none";document.getElementsByClassName("result-box")[i].style.display = "none";}function clearsearch(i){document.getElementsByClassName("search-input")[i].value = "";document.getElementsByClassName("result-box")[i].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "none";}function searchmykeyword(i){var search_input = document.getElementsByClassName("search-input")[i];if(search_input.value.length > 0){document.getElementsByClassName("close-button")[i].style.display = "block";}var request = new XMLHttpRequest();request.open("GET", "frontend/search?search="+search_input.value, true);request.setRequestHeader("Content-Type", "application/json;  charset=UTF-8");request.onreadystatechange = function() {if (request.readyState == XMLHttpRequest.DONE) {if (request.status == 200) {var gethtml = "";JSON.parse(request.response).forEach(function(res){gethtml += '<a href="'+base_url+res.tool_slug+'"><li>'+res.tool_title+'</li></a>';});document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("result-box")[i].innerHTML = gethtml;} else {console.log("error");}}};request.send();}function openmenu(){if (document.getElementsByClassName("header-menu-mobile")[0].style.display != "block") {document.getElementsByClassName("header-menu-mobile")[0].style.display = "block";}else{document.getElementsByClassName("header-menu-mobile")[0].style.display = "none";}}
 </script>
@@ -82,11 +82,11 @@
 <div class="text-center custom_tool_box m-0 text-left" style="padding-left: 20px;padding-right: 20px;">
 <form autocomplete="off" name="calcform">
 <div class="col-md-12">
-<h1 class="text-center">CMYK to Pantone</h1>
+<!-- <h1 class="text-center">CMYK to Pantone</h1>
 <p style="text-align: center;"></p>
 <div class="text-center">
 <div id="home_top_a" class="default_a" style="max-width: 728px;height: 90px;">
-</div>
+</div> -->
 </div>
 <link rel="stylesheet" href="https://www.utilities-online.info/assets/css/colpick.css?ver=1.1">
 <style type="text/css">
@@ -168,16 +168,16 @@
 </div>
 </div>
 </div>
-<div class="text-center" style="display: inline-block;width: 100%;">
+<!-- <div class="text-center" style="display: inline-block;width: 100%;">
 <div id="home_bottom_a" class="default_a" style="max-width: 728px;height: 90px;">
 </div>
-</div>
+</div> -->
 </div>
 </form>
-<div class="text-center" style="display: inline-block;width: 100%;">
+<!-- <div class="text-center" style="display: inline-block;width: 100%;">
 <div id="home_bottom_a" class="default_a" style="max-width: 728px;height: 90px;">
 </div>
-</div>
+</div> -->
 </div>
 <script>var ads_time = 0;</script>
 <script>
@@ -257,7 +257,7 @@ function alert_box_close(){
 				.flex_utilities_tools{width: 92%;margin-top: 15px;}
 			}
 		</style>
-<div class="col-md-12 container flex_utilities">
+<!-- <div class="col-md-12 container flex_utilities">
 <div class="flex_utilities_content"></div>
 <div class="flex_utilities_tools">
 <div class="flex_color">
@@ -294,7 +294,7 @@ function alert_box_close(){
 <div>
 <a href="https://www.utilities-online.info/blogs">Blogs</a> | <a href="https://www.utilities-online.info/contact">Contact Us</a> | <a href="https://www.utilities-online.info/faqs">FAQs</a> | <a href="https://www.utilities-online.info/privacy-policy">Privacy Policy</a>
 </div>
-</div>
+</div> -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190772945-1"></script>
 <script>

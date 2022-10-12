@@ -21,7 +21,7 @@
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
 
-<div id="title">
+<!-- <div id="title">
 <div class="top-logo" style="height: 45px;">
 <a href="https://www.utilities-online.info/"><img id="logo" style="height: 40px;" data-src="https://www.utilities-online.info/assets/images/logo.png?v=1.0.0"></img><span class="titletext">Utilities Online</span></a>
 <img data-src="https://www.utilities-online.info/assets/images/menu.png" class="menu_button" onclick="openmenu()">
@@ -68,18 +68,18 @@
 </div>
 </div>
 
-</div>
+</div> -->
 <script>
     window.addEventListener("load",function(){var html = document.getElementsByClassName("menu_url")[0].innerHTML;document.getElementsByClassName("menu_url")[1].style.display = "flex";document.getElementsByClassName("menu_url")[1].innerHTML = html;});document.addEventListener('click', function(event) {var searchbutton = document.getElementsByClassName('search-button')[0];var searchinput = document.getElementsByClassName('search-input')[1];var targetbutton = searchbutton.contains(event.target);var targetinput = searchinput.contains(event.target);if (!targetbutton && !targetinput) {closesearch(1);}});function searchnow(i){document.getElementsByClassName("search-button")[0].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "block";document.getElementsByClassName("search-input")[i].style.display = "block";document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("search-input")[i].focus();}function closesearch(i){document.getElementsByClassName("search-button")[0].style.display = "block";document.getElementsByClassName("close-button")[i].style.display = "none";document.getElementsByClassName("search-input")[i].style.display = "none";document.getElementsByClassName("result-box")[i].style.display = "none";}function clearsearch(i){document.getElementsByClassName("search-input")[i].value = "";document.getElementsByClassName("result-box")[i].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "none";}function searchmykeyword(i){var search_input = document.getElementsByClassName("search-input")[i];if(search_input.value.length > 0){document.getElementsByClassName("close-button")[i].style.display = "block";}var request = new XMLHttpRequest();request.open("GET", "frontend/search?search="+search_input.value, true);request.setRequestHeader("Content-Type", "application/json;  charset=UTF-8");request.onreadystatechange = function() {if (request.readyState == XMLHttpRequest.DONE) {if (request.status == 200) {var gethtml = "";JSON.parse(request.response).forEach(function(res){gethtml += '<a href="'+base_url+res.tool_slug+'"><li>'+res.tool_title+'</li></a>';});document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("result-box")[i].innerHTML = gethtml;} else {console.log("error");}}};request.send();}function openmenu(){if (document.getElementsByClassName("header-menu-mobile")[0].style.display != "block") {document.getElementsByClassName("header-menu-mobile")[0].style.display = "block";}else{document.getElementsByClassName("header-menu-mobile")[0].style.display = "none";}}
 </script>
 <style>.tools-list ul .item>span span{font-size: 14px;}@media only screen and (max-width: 1440px) and (min-width: 1025px){.tools-list ul .item{padding: 20px 15px;}.tools-list ul .item>span span{font-size: 13px;}}@media only screen and (max-width: 1024px) and (min-width: 768px){.tools-list ul .item{padding: 20px 10px;}.tools-list ul .item>span span{font-size: 12px;}}@media only screen and (max-width: 767px){.tools-list ul .item>span span{font-size: 14px;}}</style>
-<h2 class="text-center">Utilities and Tools online</h2>
+<!-- <h2 class="text-center">Utilities and Tools online</h2>
 <p style="padding: 0px 20px;" class="text-center">A lot of times I've searched functions or simple conversion tools over the internet.
-So I decided to create a space that brings together utilities that I use more often!</p>
-<div class="row text-center">
+So I decided to create a space that brings together utilities that I use more often!</p> -->
+<!-- <div class="row text-center">
 <div id="home_top_a" class="default_a" style="max-width: 728px;height: 90px;">
 </div>
-</div>
+</div> -->
 <nav class="tools-list no-select">
 <ul>
 <li>
@@ -124,13 +124,13 @@ So I decided to create a space that brings together utilities that I use more of
 </span>
 </a>
 </li>
-<li>
+<!-- <li>
 <a href="base64-to-image-converter.html" class="item">
 <span>
 <span>Base64 to Image</span>
 </span>
 </a>
-</li>
+</li> -->
 <li>
 <a href="css-beautifier.html" class="item">
 <span>
@@ -194,14 +194,14 @@ So I decided to create a space that brings together utilities that I use more of
 </span>
 </a>
 </li>
-<li>
+<!-- <li>
 <a href="crop-image-online.html" class="item">
 <span>
 <span>Crop Image Online</span>
 </span>
 </a>
-</li>
-<li>
+</li> -->
+<!-- <li>
 <a href="decimal-to-ascii.html" class="item">
 <span>
 <span>Decimal to ASCII Converter</span>
@@ -809,7 +809,7 @@ So I decided to create a space that brings together utilities that I use more of
 <span style="font-size: 12px;">Various articles on Technology</span>
 </span>
 </a>
-</li>
+</li> -->
 </ul>
 </nav>
 <style>

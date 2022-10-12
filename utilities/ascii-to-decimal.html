@@ -24,7 +24,7 @@
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
 
-<div id="title">
+<!-- <div id="title">
 <div class="top-logo" style="height: 45px;">
 <a href="https://www.utilities-online.info/"><img id="logo" style="height: 40px;" data-src="https://www.utilities-online.info/assets/images/logo.png?v=1.0.0"></img><span class="titletext">Utilities Online</span></a>
 <img data-src="https://www.utilities-online.info/assets/images/menu.png" class="menu_button" onclick="openmenu()">
@@ -71,7 +71,7 @@
 </div>
 </div>
 
-</div>
+</div> -->
 <script>
     window.addEventListener("load",function(){var html = document.getElementsByClassName("menu_url")[0].innerHTML;document.getElementsByClassName("menu_url")[1].style.display = "flex";document.getElementsByClassName("menu_url")[1].innerHTML = html;});document.addEventListener('click', function(event) {var searchbutton = document.getElementsByClassName('search-button')[0];var searchinput = document.getElementsByClassName('search-input')[1];var targetbutton = searchbutton.contains(event.target);var targetinput = searchinput.contains(event.target);if (!targetbutton && !targetinput) {closesearch(1);}});function searchnow(i){document.getElementsByClassName("search-button")[0].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "block";document.getElementsByClassName("search-input")[i].style.display = "block";document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("search-input")[i].focus();}function closesearch(i){document.getElementsByClassName("search-button")[0].style.display = "block";document.getElementsByClassName("close-button")[i].style.display = "none";document.getElementsByClassName("search-input")[i].style.display = "none";document.getElementsByClassName("result-box")[i].style.display = "none";}function clearsearch(i){document.getElementsByClassName("search-input")[i].value = "";document.getElementsByClassName("result-box")[i].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "none";}function searchmykeyword(i){var search_input = document.getElementsByClassName("search-input")[i];if(search_input.value.length > 0){document.getElementsByClassName("close-button")[i].style.display = "block";}var request = new XMLHttpRequest();request.open("GET", "frontend/search?search="+search_input.value, true);request.setRequestHeader("Content-Type", "application/json;  charset=UTF-8");request.onreadystatechange = function() {if (request.readyState == XMLHttpRequest.DONE) {if (request.status == 200) {var gethtml = "";JSON.parse(request.response).forEach(function(res){gethtml += '<a href="'+base_url+res.tool_slug+'"><li>'+res.tool_title+'</li></a>';});document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("result-box")[i].innerHTML = gethtml;} else {console.log("error");}}};request.send();}function openmenu(){if (document.getElementsByClassName("header-menu-mobile")[0].style.display != "block") {document.getElementsByClassName("header-menu-mobile")[0].style.display = "block";}else{document.getElementsByClassName("header-menu-mobile")[0].style.display = "none";}}
 </script>
@@ -82,11 +82,11 @@
 <div class="text-center custom_tool_box m-0 text-left" style="padding-left: 20px;padding-right: 20px;">
 <form autocomplete="off" name="calcform">
 <div class="col-md-12">
-<h1 class="text-center">ASCII to Decimal Converter</h1>
+<!-- <h1 class="text-center">ASCII to Decimal Converter</h1>
 <p style="text-align: center;">Enter your ASCII code in the input box and hit the "ASCII to Decimal" button to convert it into Decimal using ASCII to Decimal converter</p>
 <div class="text-center">
 <div id="home_top_a" class="default_a" style="max-width: 728px;height: 90px;">
-</div>
+</div> -->
 </div><div class="row">
 <div class="col-sm-5">
 <div class="icons-main">
@@ -100,10 +100,10 @@
 <span style="color: #eeeeee;letter-spacing: 2.4px;"><i>Sample</i></span>
 </span>
 <textarea id="sampledata" style="display: none;">72, 101, 108, 108, 111</textarea>
-<span class="textarea-buttons tooltip" onclick="uploadfile()">
+<!-- <span class="textarea-buttons tooltip" onclick="uploadfile()">
 <span class="tooltiptext" style="bottom: 140%;">Upload File</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/upload.svg?ver=1.1" />
-</span>
+</span> -->
 <span class="textarea-buttons tooltip" onclick="deleteinputdata()">
 <span class="tooltiptext" style="bottom: 140%;">Clear</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/erase.svg" />
@@ -115,13 +115,13 @@
 </div>
 <div class="col-sm-2" style="margin: auto;text-align: center;">
 <button type="button" onclick="ConvertASCII()" class="btn">ASCII to Decimal</button>
-<div style="margin: 20px 0px;">
+<!-- <div style="margin: 20px 0px;">
 <a href="https://www.utilities-online.info/decimal-to-ascii" style="text-decoration: underline !Important;">Decimal to ASCII</a>
-</div>
-<div class="text-center">
+</div> -->
+<!-- <div class="text-center">
 <div id="home_middle_a" class="default_a" style="width: 200px;height: 200px;">
 </div>
-</div>
+</div> -->
 </div>
 <div class="col-sm-5" id="output-box">
 <div class="icons-main">
@@ -130,14 +130,14 @@
 <span><label style="color:#ffffff;opacity: 0.9;letter-spacing: 1.5px;left: 0px !important;">Output</label></span>
 </div>
 <div>
-<span class="textarea-buttons tooltip" onclick="save_file()">
+<!-- <span class="textarea-buttons tooltip" onclick="save_file()">
 <span class="tooltiptext">Download</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/save.svg?ver=1.1" />
-</span>
-<span class="textarea-buttons tooltip" onclick="copy_output()">
+</span> -->
+<!-- <span class="textarea-buttons tooltip" onclick="copy_output()">
 <span class="tooltiptext copied">Copy</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/copy.svg" />
-</span>
+</span> -->
 <span class="textarea-buttons tooltip" onclick="deleteoutputdata()">
 <span class="tooltiptext">Clear</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/erase.svg" />
@@ -150,10 +150,10 @@
 </div>
 </div>
 </form>
-<div class="text-center" style="display: inline-block;width: 100%;">
+<!-- <div class="text-center" style="display: inline-block;width: 100%;">
 <div id="home_bottom_a" class="default_a" style="max-width: 728px;height: 90px;">
 </div>
-</div>
+</div> -->
 </div>
 <script>var ads_time = 0;</script>
 <script>
@@ -238,8 +238,8 @@ function alert_box_close(){
 			}
 		</style>
 <div class="col-md-12 container flex_utilities">
-<div class="flex_utilities_content"><p>The ASCII to decimal converter enables you to convert the ASCII text into decimal numbers without memorizing the conversion table.<br /> It tells the length of characters and displays the accurate decimal digits within a fraction of seconds.</p> <h2 id="how-to-use-ascii-converter">How to use ASCII Converter?</h2> <p>To convert ASCII to decimal, follow the below guideline:</p> <ol> <li>Enter the ASCII Characters in the given input box.</li> <li>Click the &ldquo;Convert&rdquo; button.</li> <li>Select the output delimiter string.</li> </ol> <p>Once you press the button, it will convert the given characters to their binary, hex, decimal, and <a href="https://www.utilities-online.info/base64">base64</a> representatives.</p> <p>You can also use our <a href="https://www.utilities-online.info/decimal-to-ascii">decimal to ASCII converter</a> to reverse&nbsp;this process</p> <h2 id="what-is-ascii-text">What is ASCII Text?</h2> <p>The American Standard Code for Information Interchange &ldquo;ASCII&rdquo; is the <a href="https://www.w3.org/International/questions/qa-what-is-encoding" rel="nofollow" target="_blank">character encoding</a> standard for electronic communication to transfer text.</p> <p>It is based on 128 7-bit codes including 26 English Alphabets both in uppercase and lowercase.<br /> ASCII characters also include numbers from zero to 9 and several punctuation marks.</p> <h2 id="what-is-decimal-number-system">What is Decimal Number System?</h2> <p>In a numbers system, the decimal numbers are called a base digit 10 number system.</p> <p>Converting numbers into the base-10 number system is an easy method but it takes a lot of time.<br /> Our decimal converter tool provides an easy option to convert the <a href="https://theasciicode.com.ar/" rel="nofollow" target="_blank">ASCII characters</a> into decimal values in no time.</p> <p><strong>Decimal Converter Examples:</strong></p> <p>If you input the number &ldquo;<strong>11 818 999</strong>&rdquo;, the decimal output will be:</p> <p style="text-align:center">&ldquo;<strong>49 49 32 56 49 56 32 57 57 57</strong>&rdquo;</p> <p>If you enter the number &ldquo;<strong>11 818 999</strong>&rdquo;, the base64 result will be:</p> <p style="text-align:center">&ldquo;<strong>MTEgODE4IDk5OQ==</strong>&rdquo;</p></div>
-<div class="flex_utilities_tools">
+<!-- <div class="flex_utilities_content"><p>The ASCII to decimal converter enables you to convert the ASCII text into decimal numbers without memorizing the conversion table.<br /> It tells the length of characters and displays the accurate decimal digits within a fraction of seconds.</p> <h2 id="how-to-use-ascii-converter">How to use ASCII Converter?</h2> <p>To convert ASCII to decimal, follow the below guideline:</p> <ol> <li>Enter the ASCII Characters in the given input box.</li> <li>Click the &ldquo;Convert&rdquo; button.</li> <li>Select the output delimiter string.</li> </ol> <p>Once you press the button, it will convert the given characters to their binary, hex, decimal, and <a href="https://www.utilities-online.info/base64">base64</a> representatives.</p> <p>You can also use our <a href="https://www.utilities-online.info/decimal-to-ascii">decimal to ASCII converter</a> to reverse&nbsp;this process</p> <h2 id="what-is-ascii-text">What is ASCII Text?</h2> <p>The American Standard Code for Information Interchange &ldquo;ASCII&rdquo; is the <a href="https://www.w3.org/International/questions/qa-what-is-encoding" rel="nofollow" target="_blank">character encoding</a> standard for electronic communication to transfer text.</p> <p>It is based on 128 7-bit codes including 26 English Alphabets both in uppercase and lowercase.<br /> ASCII characters also include numbers from zero to 9 and several punctuation marks.</p> <h2 id="what-is-decimal-number-system">What is Decimal Number System?</h2> <p>In a numbers system, the decimal numbers are called a base digit 10 number system.</p> <p>Converting numbers into the base-10 number system is an easy method but it takes a lot of time.<br /> Our decimal converter tool provides an easy option to convert the <a href="https://theasciicode.com.ar/" rel="nofollow" target="_blank">ASCII characters</a> into decimal values in no time.</p> <p><strong>Decimal Converter Examples:</strong></p> <p>If you input the number &ldquo;<strong>11 818 999</strong>&rdquo;, the decimal output will be:</p> <p style="text-align:center">&ldquo;<strong>49 49 32 56 49 56 32 57 57 57</strong>&rdquo;</p> <p>If you enter the number &ldquo;<strong>11 818 999</strong>&rdquo;, the base64 result will be:</p> <p style="text-align:center">&ldquo;<strong>MTEgODE4IDk5OQ==</strong>&rdquo;</p></div> -->
+<!-- <div class="flex_utilities_tools">
 <div class="flex_color">
 <h3>Related Tools</h3>
 <div>
@@ -273,22 +273,22 @@ function alert_box_close(){
 </div>
 </div>
 </div>
-</div>
-<div style="margin-top: 50px;text-align: center;">
+</div> -->
+<!-- <div style="margin-top: 50px;text-align: center;">
 <a target="_blank" href="https://www.facebook.com/Utilities-Online-105379475036088">Facebook</a> | <a target="_blank" href="https://twitter.com/UtilitieOnline">Twitter</a> | <a target="_blank" href="https://www.pinterest.com/UtilitiesOnline">Pinterest</a> | <a target="_blank" href="https://www.linkedin.com/company/utilities-online">LinkedIn</a>
-</div>
+</div> -->
 
-<div class="ads adsdown footer">
+<!-- <div class="ads adsdown footer">
 <div>
 © 2014–2021 <a href="https://www.utilities-online.info/">Utilities Online</a> All rights reserved.
 </div>
 <div>
 <a href="https://www.utilities-online.info/blogs">Blogs</a> | <a href="https://www.utilities-online.info/contact">Contact Us</a> | <a href="https://www.utilities-online.info/faqs">FAQs</a> | <a href="https://www.utilities-online.info/privacy-policy">Privacy Policy</a>
 </div>
-</div>
+</div> -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190772945-1"></script>
-<script>
+<script>  
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());

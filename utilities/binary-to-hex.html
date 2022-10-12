@@ -24,7 +24,7 @@
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
 
-<div id="title">
+<!-- <div id="title">
 <div class="top-logo" style="height: 45px;">
 <a href="https://www.utilities-online.info/"><img id="logo" style="height: 40px;" data-src="https://www.utilities-online.info/assets/images/logo.png?v=1.0.0"></img><span class="titletext">Utilities Online</span></a>
 <img data-src="https://www.utilities-online.info/assets/images/menu.png" class="menu_button" onclick="openmenu()">
@@ -71,7 +71,7 @@
 </div>
 </div>
 
-</div>
+</div> -->
 <script>
     window.addEventListener("load",function(){var html = document.getElementsByClassName("menu_url")[0].innerHTML;document.getElementsByClassName("menu_url")[1].style.display = "flex";document.getElementsByClassName("menu_url")[1].innerHTML = html;});document.addEventListener('click', function(event) {var searchbutton = document.getElementsByClassName('search-button')[0];var searchinput = document.getElementsByClassName('search-input')[1];var targetbutton = searchbutton.contains(event.target);var targetinput = searchinput.contains(event.target);if (!targetbutton && !targetinput) {closesearch(1);}});function searchnow(i){document.getElementsByClassName("search-button")[0].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "block";document.getElementsByClassName("search-input")[i].style.display = "block";document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("search-input")[i].focus();}function closesearch(i){document.getElementsByClassName("search-button")[0].style.display = "block";document.getElementsByClassName("close-button")[i].style.display = "none";document.getElementsByClassName("search-input")[i].style.display = "none";document.getElementsByClassName("result-box")[i].style.display = "none";}function clearsearch(i){document.getElementsByClassName("search-input")[i].value = "";document.getElementsByClassName("result-box")[i].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "none";}function searchmykeyword(i){var search_input = document.getElementsByClassName("search-input")[i];if(search_input.value.length > 0){document.getElementsByClassName("close-button")[i].style.display = "block";}var request = new XMLHttpRequest();request.open("GET", "frontend/search?search="+search_input.value, true);request.setRequestHeader("Content-Type", "application/json;  charset=UTF-8");request.onreadystatechange = function() {if (request.readyState == XMLHttpRequest.DONE) {if (request.status == 200) {var gethtml = "";JSON.parse(request.response).forEach(function(res){gethtml += '<a href="'+base_url+res.tool_slug+'"><li>'+res.tool_title+'</li></a>';});document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("result-box")[i].innerHTML = gethtml;} else {console.log("error");}}};request.send();}function openmenu(){if (document.getElementsByClassName("header-menu-mobile")[0].style.display != "block") {document.getElementsByClassName("header-menu-mobile")[0].style.display = "block";}else{document.getElementsByClassName("header-menu-mobile")[0].style.display = "none";}}
 </script>
@@ -82,11 +82,11 @@
 <div class="text-center custom_tool_box m-0 text-left" style="padding-left: 20px;padding-right: 20px;">
 <form autocomplete="off" name="calcform">
 <div class="col-md-12">
-<h1 class="text-center">Binary to Hexadecimal converter</h1>
+<!-- <h1 class="text-center">Binary to Hexadecimal converter</h1>
 <p style="text-align: center;">Input binary numbers in the left box and press the "binary to hex" button to convert them into hexadecimal by using this binary to hex converter</p>
 <div class="text-center">
 <div id="home_top_a" class="default_a" style="max-width: 728px;height: 90px;">
-</div>
+</div> -->
 </div><div class="row">
 <div class="col-sm-5">
 <div class="icons-main">
@@ -101,10 +101,10 @@
 
 </span>
 <textarea id="sampledata" style="display: none;">11000011010101100</textarea>
-<span class="textarea-buttons tooltip" onclick="uploadfile()">
+<!-- <span class="textarea-buttons tooltip" onclick="uploadfile()">
 <span class="tooltiptext" style="bottom: 140%;">Upload File</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/upload.svg?ver=1.1" />
-</span>
+</span> -->
 <span class="textarea-buttons tooltip" onclick="deleteinputdata()">
 <span class="tooltiptext" style="bottom: 140%;">Clear</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/erase.svg" />
@@ -116,10 +116,10 @@
 </div>
 <div class="col-sm-2" style="margin: auto;text-align: center;">
 <button type="button" onclick="convert()" class="btn">Binary to HEX</button>
-<div class="text-center">
+<!-- <div class="text-center">
 <div id="home_middle_a" class="default_a" style="width: 200px;height: 200px;">
 </div>
-</div>
+</div> -->
 </div>
 <div class="col-sm-5" id="output-box">
 <div class="icons-main">
@@ -128,14 +128,7 @@
 <span><label style="color:#ffffff;opacity: 0.9;letter-spacing: 1.5px;left: 0px !important;">Output</label></span>
 </div>
 <div>
-<span class="textarea-buttons tooltip" onclick="save_file()">
-<span class="tooltiptext">Download</span>
-<img class="icons-img" data-src="https://www.utilities-online.info/imgs/save.svg?ver=1.1" />
-</span>
-<span class="textarea-buttons tooltip" onclick="copy_output()">
-<span class="tooltiptext copied">Copy</span>
-<img class="icons-img" data-src="https://www.utilities-online.info/imgs/copy.svg" />
-</span>
+<!-- <spasn> -->
 <span class="textarea-buttons tooltip" onclick="deleteoutputdata()">
 <span class="tooltiptext">Clear</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/erase.svg" />
@@ -148,10 +141,10 @@
 </div>
 </div>
 </form>
-<div class="text-center" style="display: inline-block;width: 100%;">
+<!-- <div class="text-center" style="display: inline-block;width: 100%;">
 <div id="home_bottom_a" class="default_a" style="max-width: 728px;height: 90px;">
 </div>
-</div>
+</div> -->
 </div>
 <script>var ads_time = 0;</script>
 <script>
@@ -235,7 +228,7 @@ function alert_box_close(){
 				.flex_utilities_tools{width: 92%;margin-top: 15px;}
 			}
 		</style>
-<div class="col-md-12 container flex_utilities">
+<!-- <div class="col-md-12 container flex_utilities">
 <div class="flex_utilities_content"><h2 id="binary-to-hexadecimal-converter">Binary to Hexadecimal converter</h2> <p>In the binary number system, we can write numbers in the form of 0100110, where only 2 digits are used in the whole number (1 and 0).</p> <p>It is a number system with a base of 2 thus having only two possible digits.<br /> Whereas in the case of the hexadecimal system, you can write numbers in the form of 3AC36B1.<br /> Hexadecimal is the number system with a base of 16 and having 16 possible digits plus characters to represent the number.<br /> The numbers are ranging from 0 to 9 and the characters are A, B, C, D, E, and F.<br /> The Binary to <a href="https://www.utilities-online.info/hex-to-text">Hexadecimal converter</a> tool can be used to convert any binary number to a hexadecimal number system.</p> <h2 id="how-to-use-this-tool">How to use this tool?&nbsp;</h2> <p>To use it, put the binary number in the input box and click on the convert button to get the desired result.<br /> You can also reset the input if you want to try another example.</p> <p>You can also use our <a href="https://www.utilities-online.info/hex-to-binary">hexadecimal to the binary converter</a> to reverse this process.<br /> &nbsp;<br /> This tool is quite efficient and handy in the field of mathematics and computer sciences.<br /> The process to convert Binary to Hexadecimal<br /> The process of converting Binary numbers to Decimal is very simple.<br /> This conversion is based on dividing the binary number into 4-digit blocks from the right to the left.<br /> For example, if the number 10100011, then there will be two blocks each having 4 digits of binary numbers.<br /> 1010&nbsp;&nbsp; &nbsp;0011<br /> After converting them into blocks, the binary to the hexadecimal table can be used for calculation.</p> <p>Following is the table of this sort of conversion:</p> <table border="1" cellpadding="1" cellspacing="1" style="width:500px"> <tbody> <tr> <td>Binary Number System</td> <td>Hexadecimal Number System</td> </tr> <tr> <td style="vertical-align:top; width:233.75pt"> <p><strong>0000</strong></p> </td> <td style="vertical-align:top; width:233.75pt"> <p><strong>0</strong></p> </td> </tr> <tr> <td style="background-color:#f2f2f2; width:233.75pt"> <p><strong>0001</strong></p> </td> <td style="background-color:#f2f2f2; width:233.75pt"> <p>1</p> </td> </tr> <tr> <td style="vertical-align:top; width:233.75pt"> <p><strong>0010</strong></p> </td> <td style="vertical-align:top; width:233.75pt"> <p>2</p> </td> </tr> <tr> <td style="background-color:#f2f2f2; width:233.75pt"> <p><strong>0011</strong></p> </td> <td style="background-color:#f2f2f2; width:233.75pt"> <p>3</p> </td> </tr> <tr> <td style="vertical-align:top; width:233.75pt"> <p><strong>0100</strong></p> </td> <td style="vertical-align:top; width:233.75pt"> <p>4</p> </td> </tr> <tr> <td style="background-color:#f2f2f2; width:233.75pt"> <p><strong>0101</strong></p> </td> <td style="background-color:#f2f2f2; width:233.75pt"> <p>5</p> </td> </tr> <tr> <td style="vertical-align:top; width:233.75pt"> <p><strong>0110</strong></p> </td> <td style="vertical-align:top; width:233.75pt"> <p>6</p> </td> </tr> <tr> <td style="background-color:#f2f2f2; width:233.75pt"> <p><strong>0111</strong></p> </td> <td style="background-color:#f2f2f2; width:233.75pt"> <p>7</p> </td> </tr> <tr> <td style="vertical-align:top; width:233.75pt"> <p><strong>1000</strong></p> </td> <td style="vertical-align:top; width:233.75pt"> <p>8</p> </td> </tr> <tr> <td style="background-color:#f2f2f2; width:233.75pt"> <p><strong>1001</strong></p> </td> <td style="background-color:#f2f2f2; width:233.75pt"> <p>9</p> </td> </tr> <tr> <td style="vertical-align:top; width:233.75pt"> <p><strong>1010</strong></p> </td> <td style="vertical-align:top; width:233.75pt"> <p>A</p> </td> </tr> <tr> <td style="background-color:#f2f2f2; width:233.75pt"> <p><strong>1011</strong></p> </td> <td style="background-color:#f2f2f2; width:233.75pt"> <p>B</p> </td> </tr> <tr> <td style="vertical-align:top; width:233.75pt"> <p><strong>1100</strong></p> </td> <td style="vertical-align:top; width:233.75pt"> <p>C</p> </td> </tr> <tr> <td style="background-color:#f2f2f2; width:233.75pt"> <p><strong>1101</strong></p> </td> <td style="background-color:#f2f2f2; width:233.75pt"> <p>D</p> </td> </tr> <tr> <td style="vertical-align:top; width:233.75pt"> <p><strong>1110</strong></p> </td> <td style="vertical-align:top; width:233.75pt"> <p>E</p> </td> </tr> <tr> <td style="background-color:#f2f2f2; width:233.75pt"> <p><strong>1111</strong></p> </td> <td style="background-color:#f2f2f2; width:233.75pt"> <p>F</p> </td> </tr> </tbody> </table> <p>To transform from binary to hexadecimal system, you just need to make 4-digit block.&nbsp;<br /> Once you know the 4 digits, you can find it to a hexadecimal chart to create your hexadecimal number.</p> <p>The expression &quot;hexadecimal number system&quot; can be a little misleading sometimes because it is commonly a combination of letters and numbers.&nbsp;</p> <p>It is likely to convert from binary to hexadecimal and get the result consisting of letters only.&nbsp;<br /> For example, the binary number 110010111010 and its 4 digit-block will be the following:</p> <p>1100&nbsp;&nbsp; &nbsp;1011&nbsp;&nbsp; &nbsp;1010</p> <p>And these numbers are equal to the following hexadecimal numbers from the table:</p> <p>1100 = C<br /> 1011 = B<br /> 1010 = A</p> <p>So, the answer &lsquo;<strong>CBA</strong>&rsquo; consists of only letters, not numbers which is a bit confusing.<br /> To avoid any inconvenience, use the tool to save your time and enjoy the free calculation right away.</p></div>
 <div class="flex_utilities_tools">
 <div class="flex_color">
@@ -292,7 +285,7 @@ function alert_box_close(){
 <div>
 <a href="https://www.utilities-online.info/blogs">Blogs</a> | <a href="https://www.utilities-online.info/contact">Contact Us</a> | <a href="https://www.utilities-online.info/faqs">FAQs</a> | <a href="https://www.utilities-online.info/privacy-policy">Privacy Policy</a>
 </div>
-</div>
+</div> -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190772945-1"></script>
 <script>

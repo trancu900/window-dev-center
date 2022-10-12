@@ -24,7 +24,7 @@
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
 
-<div id="title">
+<!-- <div id="title">
 <div class="top-logo" style="height: 45px;">
 <a href="https://www.utilities-online.info/"><img id="logo" style="height: 40px;" data-src="https://www.utilities-online.info/assets/images/logo.png?v=1.0.0"></img><span class="titletext">Utilities Online</span></a>
 <img data-src="https://www.utilities-online.info/assets/images/menu.png" class="menu_button" onclick="openmenu()">
@@ -71,7 +71,7 @@
 </div>
 </div>
 
-</div>
+</div> -->
 <script>
     window.addEventListener("load",function(){var html = document.getElementsByClassName("menu_url")[0].innerHTML;document.getElementsByClassName("menu_url")[1].style.display = "flex";document.getElementsByClassName("menu_url")[1].innerHTML = html;});document.addEventListener('click', function(event) {var searchbutton = document.getElementsByClassName('search-button')[0];var searchinput = document.getElementsByClassName('search-input')[1];var targetbutton = searchbutton.contains(event.target);var targetinput = searchinput.contains(event.target);if (!targetbutton && !targetinput) {closesearch(1);}});function searchnow(i){document.getElementsByClassName("search-button")[0].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "block";document.getElementsByClassName("search-input")[i].style.display = "block";document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("search-input")[i].focus();}function closesearch(i){document.getElementsByClassName("search-button")[0].style.display = "block";document.getElementsByClassName("close-button")[i].style.display = "none";document.getElementsByClassName("search-input")[i].style.display = "none";document.getElementsByClassName("result-box")[i].style.display = "none";}function clearsearch(i){document.getElementsByClassName("search-input")[i].value = "";document.getElementsByClassName("result-box")[i].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "none";}function searchmykeyword(i){var search_input = document.getElementsByClassName("search-input")[i];if(search_input.value.length > 0){document.getElementsByClassName("close-button")[i].style.display = "block";}var request = new XMLHttpRequest();request.open("GET", "frontend/search?search="+search_input.value, true);request.setRequestHeader("Content-Type", "application/json;  charset=UTF-8");request.onreadystatechange = function() {if (request.readyState == XMLHttpRequest.DONE) {if (request.status == 200) {var gethtml = "";JSON.parse(request.response).forEach(function(res){gethtml += '<a href="'+base_url+res.tool_slug+'"><li>'+res.tool_title+'</li></a>';});document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("result-box")[i].innerHTML = gethtml;} else {console.log("error");}}};request.send();}function openmenu(){if (document.getElementsByClassName("header-menu-mobile")[0].style.display != "block") {document.getElementsByClassName("header-menu-mobile")[0].style.display = "block";}else{document.getElementsByClassName("header-menu-mobile")[0].style.display = "none";}}
 </script>
@@ -82,11 +82,11 @@
 <div class="text-center custom_tool_box m-0 text-left" style="padding-left: 20px;padding-right: 20px;">
 <form autocomplete="off" name="calcform">
 <div class="col-md-12">
-<h1 class="text-center">ASCII to Text Converter</h1>
+<!-- <h1 class="text-center">ASCII to Text Converter</h1>
 <p style="text-align: center;">To convert your ASCII code to text, enter your code in the left input box and hit the "ASCII to text" button of ASCII to text converter</p>
 <div class="text-center">
 <div id="home_top_a" class="default_a" style="max-width: 728px;height: 90px;">
-</div>
+</div> -->
 </div><div class="row">
 <div class="col-sm-5">
 <div class="icons-main">
@@ -100,10 +100,10 @@
 <span style="color: #eeeeee;letter-spacing: 2.4px;"><i>Sample</i></span>
 </span>
 <textarea id="sampledata" style="display: none;">72, 101, 108, 108, 111</textarea>
-<span class="textarea-buttons tooltip" onclick="uploadfile()">
+<!-- <span class="textarea-buttons tooltip" onclick="uploadfile()">
 <span class="tooltiptext" style="bottom: 140%;">Upload File</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/upload.svg?ver=1.1" />
-</span>
+</span> -->
 <span class="textarea-buttons tooltip" onclick="deleteinputdata()">
 <span class="tooltiptext" style="bottom: 140%;">Clear</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/erase.svg" />
@@ -115,13 +115,13 @@
 </div>
 <div class="col-sm-2" style="margin: auto;text-align: center;">
 <button type="button" onclick="process()" class="btn">ASCII to Text</button>
-<div style="margin: 20px 0px;">
+<!-- <div style="margin: 20px 0px;">
 <a href="https://www.utilities-online.info/text-to-ascii" style="text-decoration: underline !Important;">Text to ASCII</a>
-</div>
-<div class="text-center">
+</div> -->
+<!-- <div class="text-center">
 <div id="home_middle_a" class="default_a" style="width: 200px;height: 200px;">
 </div>
-</div>
+</div> -->
 </div>
 <div class="col-sm-5" id="output-box">
 <div class="icons-main">
@@ -130,14 +130,14 @@
 <span><label style="color:#ffffff;opacity: 0.9;letter-spacing: 1.5px;left: 0px !important;">Output</label></span>
 </div>
 <div>
-<span class="textarea-buttons tooltip" onclick="save_file()">
+<!-- <span class="textarea-buttons tooltip" onclick="save_file()">
 <span class="tooltiptext">Download</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/save.svg?ver=1.1" />
-</span>
-<span class="textarea-buttons tooltip" onclick="copy_output()">
+</span> -->
+<!-- <span class="textarea-buttons tooltip" onclick="copy_output()">
 <span class="tooltiptext copied">Copy</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/copy.svg" />
-</span>
+</span> -->
 <span class="textarea-buttons tooltip" onclick="deleteoutputdata()">
 <span class="tooltiptext">Clear</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/erase.svg" />
@@ -150,10 +150,10 @@
 </div>
 </div>
 </form>
-<div class="text-center" style="display: inline-block;width: 100%;">
+<!-- <div class="text-center" style="display: inline-block;width: 100%;">
 <div id="home_bottom_a" class="default_a" style="max-width: 728px;height: 90px;">
 </div>
-</div>
+</div> -->
 </div>
 <script>var ads_time = 0;</script>
 <script>
@@ -237,7 +237,7 @@ function alert_box_close(){
 				.flex_utilities_tools{width: 92%;margin-top: 15px;}
 			}
 		</style>
-<div class="col-md-12 container flex_utilities">
+<!-- <div class="col-md-12 container flex_utilities">
 <div class="flex_utilities_content"><h2 style="text-align:center" id="ascii-to-text-converter">ASCII to Text Converter</h2> <p>The ASCII to text Converter help users to quickly convert ASCII codes to readable text.<br /> It provides an option for users to instantly convert any ASCII code without referring to the conversion table.</p> <h2 id="how-to-use-ascii-converter">How to use ASCII Converter?</h2> <p>To use it, follow the below guideline:</p> <ol> <li>Type or paste the ASCII characters in the input field.</li> <li>Click the &ldquo;Convert&rdquo; button.</li> </ol> <p>Once you press the button, the ASCII code converter will find the equivalent of the given code and displays the accurate result.</p> <p>You can also use our <a href="https://www.utilities-online.info/text-to-ascii">text to ASCII converter</a> to transform your text into ASCII code.</p> <h2 id="what-is-ascii">What is ASCII?</h2> <p><a href="http://www.asciitable.com/" rel="nofollow" target="_blank">ASCII</a> stands for the American Standard Code for Information Interchange and it contains all the special characters with assigned codes.</p> <p>It is a character encoding scheme and includes text that is recognized as the control characters used to control the appearance of text.&nbsp;</p> <p>There are 128 7-bit codes and they all are assigned to specific numbers starting from 0-127.<br /> Computers only understand numbers and <a href="http://www.asciitable.com/" rel="nofollow" target="_blank">ASCII codes</a> refer to characters that a computer system can easily understand.</p> <p>Some common examples of characters are A, 0, etc. The numerical representation of characters &lsquo;A&rsquo; is 65 and &lsquo;<strong>z</strong>&rsquo; is 122.</p> <h2 id="reasons-to-use-ascii-decoder">Reasons to use ASCII Decoder</h2> <p>The following factors make this converter a better option to convert <a href="http://sticksandstones.kstrom.com/appen.html" rel="nofollow" target="_blank">binary characters</a> into text form.</p> <h3>Easy and Easy Features</h3> <p>Being a user, you don&rsquo;t have to go through any drop-down menus to translate a wide range of characters.</p> <p>Simply input characters in the input box and the ASCII translator will instantly convert them into the textual form.</p> <p>It further provides an option to reset the output result with one click.</p> <h3>Completely Free Usage</h3> <p>Our tool is free to use for all purposes. There is no registration or signup process is required to use it.</p></div>
 <div class="flex_utilities_tools">
 <div class="flex_color">
@@ -288,7 +288,7 @@ function alert_box_close(){
 <div>
 <a href="https://www.utilities-online.info/blogs">Blogs</a> | <a href="https://www.utilities-online.info/contact">Contact Us</a> | <a href="https://www.utilities-online.info/faqs">FAQs</a> | <a href="https://www.utilities-online.info/privacy-policy">Privacy Policy</a>
 </div>
-</div>
+</div> -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190772945-1"></script>
 <script>

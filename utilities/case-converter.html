@@ -24,7 +24,7 @@
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
 
-<div id="title">
+<!-- <div id="title">
 <div class="top-logo" style="height: 45px;">
 <a href="https://www.utilities-online.info/"><img id="logo" style="height: 40px;" data-src="https://www.utilities-online.info/assets/images/logo.png?v=1.0.0"></img><span class="titletext">Utilities Online</span></a>
 <img data-src="https://www.utilities-online.info/assets/images/menu.png" class="menu_button" onclick="openmenu()">
@@ -71,7 +71,7 @@
 </div>
 </div>
 
-</div>
+</div> -->
 <script>
     window.addEventListener("load",function(){var html = document.getElementsByClassName("menu_url")[0].innerHTML;document.getElementsByClassName("menu_url")[1].style.display = "flex";document.getElementsByClassName("menu_url")[1].innerHTML = html;});document.addEventListener('click', function(event) {var searchbutton = document.getElementsByClassName('search-button')[0];var searchinput = document.getElementsByClassName('search-input')[1];var targetbutton = searchbutton.contains(event.target);var targetinput = searchinput.contains(event.target);if (!targetbutton && !targetinput) {closesearch(1);}});function searchnow(i){document.getElementsByClassName("search-button")[0].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "block";document.getElementsByClassName("search-input")[i].style.display = "block";document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("search-input")[i].focus();}function closesearch(i){document.getElementsByClassName("search-button")[0].style.display = "block";document.getElementsByClassName("close-button")[i].style.display = "none";document.getElementsByClassName("search-input")[i].style.display = "none";document.getElementsByClassName("result-box")[i].style.display = "none";}function clearsearch(i){document.getElementsByClassName("search-input")[i].value = "";document.getElementsByClassName("result-box")[i].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "none";}function searchmykeyword(i){var search_input = document.getElementsByClassName("search-input")[i];if(search_input.value.length > 0){document.getElementsByClassName("close-button")[i].style.display = "block";}var request = new XMLHttpRequest();request.open("GET", "frontend/search?search="+search_input.value, true);request.setRequestHeader("Content-Type", "application/json;  charset=UTF-8");request.onreadystatechange = function() {if (request.readyState == XMLHttpRequest.DONE) {if (request.status == 200) {var gethtml = "";JSON.parse(request.response).forEach(function(res){gethtml += '<a href="'+base_url+res.tool_slug+'"><li>'+res.tool_title+'</li></a>';});document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("result-box")[i].innerHTML = gethtml;} else {console.log("error");}}};request.send();}function openmenu(){if (document.getElementsByClassName("header-menu-mobile")[0].style.display != "block") {document.getElementsByClassName("header-menu-mobile")[0].style.display = "block";}else{document.getElementsByClassName("header-menu-mobile")[0].style.display = "none";}}
 </script>
@@ -83,11 +83,11 @@
 <div class="text-center custom_tool_box m-0 text-left" style="padding-left: 20px;padding-right: 20px;">
 <form autocomplete="off" name="calcform">
 <div class="col-md-12">
-<h1 class="text-center">Case Converter</h1>
+<!-- <h1 class="text-center">Case Converter</h1>
 <p style="text-align: center;"></p>
 <div class="text-center">
 <div id="home_top_a" class="default_a" style="max-width: 728px;height: 90px;">
-</div>
+</div> -->
 </div><div class="row">
 <div class="col-sm-5">
 <div class="icons-main">
@@ -101,10 +101,10 @@
 <span style="color: #eeeeee;letter-spacing: 2.4px;"><i>Sample</i></span>
 </span>
 <textarea id="sampledata" style="display: none;">you can change the case style of the written content from lower case to upper case.</textarea>
-<span class="textarea-buttons tooltip" onclick="uploadfile()">
+<!-- <span class="textarea-buttons tooltip" onclick="uploadfile()">
 <span class="tooltiptext" style="bottom: 140%;">Upload File</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/upload.svg?ver=1.1" />
-</span>
+</span> -->
 <span class="textarea-buttons tooltip" onclick="deleteinputdata()">
 <span class="tooltiptext" style="bottom: 140%;">Clear</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/erase.svg" />
@@ -125,10 +125,10 @@
 </select>
 <button style="margin-left: auto;margin-right: auto;" type="button" onclick="convert()" class="btn">Convert</button>
 </div>
-<div class="text-center">
+<!-- <div class="text-center">
 <div id="home_middle_a" class="default_a" style="width: 200px;height: 200px;">
 </div>
-</div>
+</div> -->
 </div>
 <div class="col-sm-5" id="output-box">
 <div class="icons-main">
@@ -137,14 +137,14 @@
 <span><label style="color:#ffffff;opacity: 0.9;letter-spacing: 1.5px;left: 0px !important;">Output</label></span>
 </div>
 <div>
-<span class="textarea-buttons tooltip" onclick="save_file()">
+<!-- <span class="textarea-buttons tooltip" onclick="save_file()">
 <span class="tooltiptext">Download</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/save.svg?ver=1.1" />
 </span>
 <span class="textarea-buttons tooltip" onclick="copy_output()">
 <span class="tooltiptext copied">Copy</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/copy.svg" />
-</span>
+</span> -->
 <span class="textarea-buttons tooltip" onclick="deleteoutputdata()">
 <span class="tooltiptext">Clear</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/erase.svg" />
@@ -157,10 +157,10 @@
 </div>
 </div>
 </form>
-<div class="text-center" style="display: inline-block;width: 100%;">
+<!-- <div class="text-center" style="display: inline-block;width: 100%;">
 <div id="home_bottom_a" class="default_a" style="max-width: 728px;height: 90px;">
 </div>
-</div>
+</div> -->
 </div>
 <script>var ads_time = 0;</script>
 <script>
@@ -244,7 +244,7 @@ function alert_box_close(){
 				.flex_utilities_tools{width: 92%;margin-top: 15px;}
 			}
 		</style>
-<div class="col-md-12 container flex_utilities">
+<!-- <div class="col-md-12 container flex_utilities">
 <div class="flex_utilities_content"><h2 style="text-align:center" id="case-converter">Case Converter</h2> <p>You can change the case style of the written content from <a href="https://www.utilities-online.info/lowercase-to-uppercase">lower case to upper case</a>.&nbsp;<br /> It provides multiple options to capitalize, un-capitalize, and transform the text in different <a href="https://techterms.com/definition/font_case" rel="nofollow" target="_blank">font cases</a>.</p> <h2 id="how-to-use-it">How to use it?</h2> <p>To convert to title case: &nbsp;&nbsp; &nbsp;</p> <ol> <li>Write or paste the text into the input box.</li> <li>Select the desired text case.</li> </ol> <p>&nbsp;When you select a case style, it converts the text and shows the output. &nbsp;</p> <h2 id="why-choose-our-case-converter">Why Choose Our Case Converter?</h2> <p>Caps converter can easily change the alternate case and inveRse letters.&nbsp;</p> <p>It gives you the following useful options:&nbsp;</p> <h3>Sentence Case</h3> <p>Capitalizes first letter of every sentence and changes remaining letters into small text.&nbsp;<br /> All letters after the period will be turned into upper case letters.&nbsp;</p> <p style="text-align:center"><strong>This is the sentence case</strong></p> <h3>Lower Case</h3> <p>If you want to un-capitalize all the letters, this <a href="https://www.utilities-online.info/uppercase-to-lowercase">lower case converter</a> will change them to lower case letters.&nbsp;<br /> Paste the text you want to convert to lowercase into the input box and select the &ldquo;Lower Case&rdquo; option.&nbsp;</p> <p style="text-align:center"><strong>this is the lowercase</strong></p> <h3>Upper Case</h3> <p>The upper case converter changes all the written letters into capitals.<br /> It will make all the lower case letters into the uppercase form.</p> <p style="text-align:center"><strong>THIS IS THE UPPER CASE</strong></p> <h3>Capitalized Case</h3> <p>The capitalized case converter converts the starting letter of every word into the capital form and leaves the remaining letters in the lower case.<br /> &nbsp; &nbsp; &nbsp; This Is A Capitalized Case</p> <h3>Alternating Case</h3> <p>The alternating case converter provides you with a letter style that switches between capital and lower-case letters.&nbsp;<br /> It will produce upper case and lower case letters in a snap of a finger.&nbsp;</p> <p style="text-align:center"><strong>tHiS Is aN aLtErNaTiNg cAsE</strong></p> <h3>Title Case</h3> <p>This option is best for those who need a way to decide on titles.&nbsp;<br /> It checks to make sure the correct letters are capitalized in the title.&nbsp;</p> <p style="text-align:center"><strong>This is a Title Case</strong></p> <h3>Inverse Case&nbsp;</h3> <p>The inverse case converter changes letters from upper to lower case.&nbsp;<br /> Type your text into the input box and it will instantly give you output in an inverse case.&nbsp;</p> <p style="text-align:center"><strong>tHiS Is aN invErsE CasE</strong></p> <h2 id="benefits-of-using-case-converter">Benefits of using Case Converter</h2> <p>Many word editing software doesn&rsquo;t provide the case converting feature.</p> <p>Some of the main benefits of using the convertcase online are:</p> <ul> <li>It saves you from the <a href="https://english.stackexchange.com/questions/26199/is-incorrect-capitalization-considered-a-spelling-error" rel="nofollow" target="_blank">wrong capitalization</a> in the sentences</li> <li>The converter helps you in quickly changing your text, making it either uppercase or lowercase</li> <li>The capitalization generator helps to capitalize the first letter in the sentence by using the &ldquo;Capitalized Case&rdquo;</li> <li>It provides an option to easily set the title of your essay with the &ldquo;Title Case&rdquo;</li> <li>It automatically counts the written characters, words, and lines</li> </ul></div>
 <div class="flex_utilities_tools">
 <div class="flex_color">
@@ -286,7 +286,7 @@ function alert_box_close(){
 <div>
 <a href="https://www.utilities-online.info/blogs">Blogs</a> | <a href="https://www.utilities-online.info/contact">Contact Us</a> | <a href="https://www.utilities-online.info/faqs">FAQs</a> | <a href="https://www.utilities-online.info/privacy-policy">Privacy Policy</a>
 </div>
-</div>
+</div> -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190772945-1"></script>
 <script>

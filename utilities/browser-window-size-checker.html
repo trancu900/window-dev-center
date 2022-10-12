@@ -24,7 +24,7 @@
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
 
-<div id="title">
+<!-- <div id="title">
 <div class="top-logo" style="height: 45px;">
 <a href="https://www.utilities-online.info/"><img id="logo" style="height: 40px;" data-src="https://www.utilities-online.info/assets/images/logo.png?v=1.0.0"></img><span class="titletext">Utilities Online</span></a>
 <img data-src="https://www.utilities-online.info/assets/images/menu.png" class="menu_button" onclick="openmenu()">
@@ -71,7 +71,7 @@
 </div>
 </div>
 
-</div>
+</div> -->
 <script>
     window.addEventListener("load",function(){var html = document.getElementsByClassName("menu_url")[0].innerHTML;document.getElementsByClassName("menu_url")[1].style.display = "flex";document.getElementsByClassName("menu_url")[1].innerHTML = html;});document.addEventListener('click', function(event) {var searchbutton = document.getElementsByClassName('search-button')[0];var searchinput = document.getElementsByClassName('search-input')[1];var targetbutton = searchbutton.contains(event.target);var targetinput = searchinput.contains(event.target);if (!targetbutton && !targetinput) {closesearch(1);}});function searchnow(i){document.getElementsByClassName("search-button")[0].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "block";document.getElementsByClassName("search-input")[i].style.display = "block";document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("search-input")[i].focus();}function closesearch(i){document.getElementsByClassName("search-button")[0].style.display = "block";document.getElementsByClassName("close-button")[i].style.display = "none";document.getElementsByClassName("search-input")[i].style.display = "none";document.getElementsByClassName("result-box")[i].style.display = "none";}function clearsearch(i){document.getElementsByClassName("search-input")[i].value = "";document.getElementsByClassName("result-box")[i].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "none";}function searchmykeyword(i){var search_input = document.getElementsByClassName("search-input")[i];if(search_input.value.length > 0){document.getElementsByClassName("close-button")[i].style.display = "block";}var request = new XMLHttpRequest();request.open("GET", "frontend/search?search="+search_input.value, true);request.setRequestHeader("Content-Type", "application/json;  charset=UTF-8");request.onreadystatechange = function() {if (request.readyState == XMLHttpRequest.DONE) {if (request.status == 200) {var gethtml = "";JSON.parse(request.response).forEach(function(res){gethtml += '<a href="'+base_url+res.tool_slug+'"><li>'+res.tool_title+'</li></a>';});document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("result-box")[i].innerHTML = gethtml;} else {console.log("error");}}};request.send();}function openmenu(){if (document.getElementsByClassName("header-menu-mobile")[0].style.display != "block") {document.getElementsByClassName("header-menu-mobile")[0].style.display = "block";}else{document.getElementsByClassName("header-menu-mobile")[0].style.display = "none";}}
 </script>
@@ -82,11 +82,11 @@
 <div class="text-center custom_tool_box m-0 text-left" style="padding-left: 20px;padding-right: 20px;">
 <form autocomplete="off" name="calcform">
 <div class="col-md-12">
-<h1 class="text-center">Browser Window Size Checker</h1>
+<!-- <h1 class="text-center">Browser Window Size Checker</h1>
 <p style="text-align: center;"></p>
 <div class="text-center">
 <div id="home_top_a" class="default_a" style="max-width: 728px;height: 90px;">
-</div>
+</div> -->
 </div> <style>
 		.main-ris-box{padding:10px;text-align:center;border:2px dashed #cfd9e4;border-radius:4px 4px 0 0}.drag-zone{height:240px;width:100%;padding-top:25px;background:#fff;border-bottom:none;}.kyrd-url-zne{overflow:hidden;padding-bottom:unset}#overlay{position:absolute;display:none;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.4);z-index:9;cursor:pointer}.drag-zone .mn-txt,.drag-zone .svg_block{display:block;font-size:13px;font-weight:600}.drag-zone h3{margin:10px 0}.mt10{margin-top:10px!important}#text{position:absolute;top:50%;left:50%;font-size:24px;color:#fff;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}.form label{color:#3d514a}.pull-left{float:left}.input-group{position:relative;display:table;border-collapse:separate;width:100%}.instUpload{font-size:2em}#inputURL{width:-webkit-fill-available}#fileName{padding-top:10px;display:block}.main-prev-box{float:left;align-items:center;position:relative;margin:0 auto;height:260px;width:180px;padding:10px;border:1px solid #e0e8ef;display:none}.prev_box{width:100%}.prev_box img{width:100%}.link-box{width:70%;margin-left:auto;margin-right:auto;background:#f6f9fd;border:1px solid #cfd9e4}@media screen and (max-width:767px){.link-box{width:95%}#inputURL{margin:10px}}.mytable{border:1px solid #ccc;border-collapse:collapse;margin:0;padding:0;width:100%}.mytable caption{font-size:1.5em;margin:.5em 0 .75em}.mytable tr{background-color:#f8f8f8;border:1px solid #ddd;padding:.35em}.mytable td,.mytable th{padding:.625em;text-align:center}.mytable th{font-size:.85em;letter-spacing:.1em;text-transform:uppercase}.image_small_box{width:250px;text-align:center}@media screen and (max-width:600px){.mytable{border:0}.mytable caption{font-size:1.3em}.mytable thead{border:none;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.mytable tr{border-bottom:3px solid #ddd;display:block;margin-bottom:.625em}.image_small_box{width:100%}.mytable td{border-bottom:1px solid #ddd;display:block;font-size:.8em;text-align:right}.mytable td::before{content:attr(data-label);float:left;font-weight:700;text-transform:uppercase}.mytable td:last-child{border-bottom:0}}.loader{border:16px solid #f3f3f3;border-radius:50%;border-top:16px solid #3498db;width:30px;height:30px;-webkit-animation:spin 2s linear infinite;animation:spin 2s linear infinite}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0)}100%{-webkit-transform:rotate(360deg)}}@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.row {display: -webkit-box;display: -ms-flexbox;display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;margin-right: -15px;margin-left: -15px;justify-content:center;}
 			#utilities_copy_alert.ut-deactive-alert{transform:translate(210px);transition:transform 1s ease}#utilities_copy_alert.ut-active-alert{transition:transform 1s ease;transform:translate(-20px)}
@@ -153,10 +153,10 @@
 </div>
 </div>
 </form>
-<div class="text-center" style="display: inline-block;width: 100%;">
+<!-- <div class="text-center" style="display: inline-block;width: 100%;">
 <div id="home_bottom_a" class="default_a" style="max-width: 728px;height: 90px;">
 </div>
-</div>
+</div> -->
 </div>
 <script>var ads_time = 0;</script>
 <script>
@@ -237,7 +237,7 @@ function alert_box_close(){
 				.flex_utilities_tools{width: 92%;margin-top: 15px;}
 			}
 		</style>
-<div class="col-md-12 container flex_utilities">
+<!-- <div class="col-md-12 container flex_utilities">
 <div class="flex_utilities_content"></div>
 <div class="flex_utilities_tools">
 <div class="flex_color">
@@ -274,7 +274,7 @@ function alert_box_close(){
 <div>
 <a href="https://www.utilities-online.info/blogs">Blogs</a> | <a href="https://www.utilities-online.info/contact">Contact Us</a> | <a href="https://www.utilities-online.info/faqs">FAQs</a> | <a href="https://www.utilities-online.info/privacy-policy">Privacy Policy</a>
 </div>
-</div>
+</div> -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190772945-1"></script>
 <script>

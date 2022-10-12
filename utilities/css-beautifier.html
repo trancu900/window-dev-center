@@ -24,7 +24,7 @@
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
 
-<div id="title">
+<!-- <div id="title">
 <div class="top-logo" style="height: 45px;">
 <a href="https://www.utilities-online.info/"><img id="logo" style="height: 40px;" data-src="https://www.utilities-online.info/assets/images/logo.png?v=1.0.0"></img><span class="titletext">Utilities Online</span></a>
 <img data-src="https://www.utilities-online.info/assets/images/menu.png" class="menu_button" onclick="openmenu()">
@@ -71,7 +71,7 @@
 </div>
 </div>
 
-</div>
+</div> -->
 <script>
     window.addEventListener("load",function(){var html = document.getElementsByClassName("menu_url")[0].innerHTML;document.getElementsByClassName("menu_url")[1].style.display = "flex";document.getElementsByClassName("menu_url")[1].innerHTML = html;});document.addEventListener('click', function(event) {var searchbutton = document.getElementsByClassName('search-button')[0];var searchinput = document.getElementsByClassName('search-input')[1];var targetbutton = searchbutton.contains(event.target);var targetinput = searchinput.contains(event.target);if (!targetbutton && !targetinput) {closesearch(1);}});function searchnow(i){document.getElementsByClassName("search-button")[0].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "block";document.getElementsByClassName("search-input")[i].style.display = "block";document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("search-input")[i].focus();}function closesearch(i){document.getElementsByClassName("search-button")[0].style.display = "block";document.getElementsByClassName("close-button")[i].style.display = "none";document.getElementsByClassName("search-input")[i].style.display = "none";document.getElementsByClassName("result-box")[i].style.display = "none";}function clearsearch(i){document.getElementsByClassName("search-input")[i].value = "";document.getElementsByClassName("result-box")[i].style.display = "none";document.getElementsByClassName("close-button")[i].style.display = "none";}function searchmykeyword(i){var search_input = document.getElementsByClassName("search-input")[i];if(search_input.value.length > 0){document.getElementsByClassName("close-button")[i].style.display = "block";}var request = new XMLHttpRequest();request.open("GET", "frontend/search?search="+search_input.value, true);request.setRequestHeader("Content-Type", "application/json;  charset=UTF-8");request.onreadystatechange = function() {if (request.readyState == XMLHttpRequest.DONE) {if (request.status == 200) {var gethtml = "";JSON.parse(request.response).forEach(function(res){gethtml += '<a href="'+base_url+res.tool_slug+'"><li>'+res.tool_title+'</li></a>';});document.getElementsByClassName("result-box")[i].style.display = "block";document.getElementsByClassName("result-box")[i].innerHTML = gethtml;} else {console.log("error");}}};request.send();}function openmenu(){if (document.getElementsByClassName("header-menu-mobile")[0].style.display != "block") {document.getElementsByClassName("header-menu-mobile")[0].style.display = "block";}else{document.getElementsByClassName("header-menu-mobile")[0].style.display = "none";}}
 </script>
@@ -82,11 +82,11 @@
 <div class="text-center custom_tool_box m-0 text-left" style="padding-left: 20px;padding-right: 20px;">
 <form autocomplete="off" name="calcform">
 <div class="col-md-12">
-<h1 class="text-center">Beautify CSS</h1>
+<!-- <h1 class="text-center">Beautify CSS</h1>
 <p style="text-align: center;">Enter your unstructured CSS code in the left input box or upload file and hit the "beautify CSS" button to make it structured</p>
-<div class="text-center">
-<div id="home_top_a" class="default_a" style="max-width: 728px;height: 90px;">
-</div>
+<div class="text-center"> -->
+<!-- <div id="home_top_a" class="default_a" style="max-width: 728px;height: 90px;">
+</div> -->
 </div><style type="text/css">
 	.model-bg{background:rgba(0,0,0,.4);height:100%;width:100%;position:fixed;z-index:50;display:none;top:0;left: 0;}.model-box{background:#fff;height:auto;left:50%;width:600px;margin:0 auto;min-height:200px;position:fixed;top:240px;margin-left:-300px;z-index:60;display:none;border-radius:10px;box-shadow:0 0 50px -5px #3a3a3a;padding:0;overflow:hidden}.model-box .model-heading{width:100%;display:block;color: #12a6be;border-bottom:1px solid #929292;background:#fff;text-align:left;padding:15px;font-size:20px}.model-box .model-body{font-size:16px;width:100%;display:block;color:#6b6b6b;min-height:100px;padding:10px}.model-box .model-footer{width:96.7%;display:flex;justify-content: center;flex-direction: row-reverse;column-gap: 5px;background:#2197aa;color:#fff;margin-bottom:0;padding:10px;text-align:center}.close-model{position:absolute;right:14px;top:10px;cursor:pointer;color:#ffffff;font-size:15px;font-weight:700;background:#2197aa;border-radius:50px;padding:3px 6px;border:none}.close-model:hover{color:#000;background:#ccc}.model-box .model-footer a{color:#000}.model-box .model-footer a:hover{text-decoration:underline}
 .btn_1_file{background: #fff;border:1px solid #17a2b8;outline:none;color:#17a2b8;font-weight:600;font-size: 17px;cursor: pointer;border-radius: 4px;}
@@ -134,14 +134,14 @@
 
 </span>
 <textarea id="sampledata" style="display: none;">72, 101, 108, 108, 111</textarea>
-<span class="textarea-buttons tooltip" onclick="uploadfile()">
+<!-- <span class="textarea-buttons tooltip" onclick="uploadfile()">
 <span class="tooltiptext" style="bottom: 140%;">Upload File</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/upload.svg?ver=1.1" />
 </span>
 <span class="textarea-buttons tooltip" onclick="alert_box()">
 <span class="tooltiptext" style="bottom: 140%;">Paste URL</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/url_w.svg?ver=1.1" />
-</span>
+</span> -->
 <span class="textarea-buttons tooltip" onclick="deleteinputdata()">
 <span class="tooltiptext" style="bottom: 140%;">Clear</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/erase.svg" />
@@ -152,18 +152,18 @@
 </div>
 </div>
 <div class="col-sm-2" style="margin: auto;text-align: center;">
-<div>
+<!-- <div>
 <button class="btn_1_file" type="button" onclick="uploadfile()"><img data-src="https://www.utilities-online.info/imgs/file_1.svg" style="width:18px;height:18px;margin-top: 3px;"> File</button>
 <button class="btn_1_url" type="button" onclick="alert_box()"><img data-src="imgs/url.svg" style="width:18px;height:18px;margin-top: 3px;"> URL</button>
-</div>
+</div> -->
 <button type="button" id="preloader" class="btn css_button">Beautify CSS</button>
-<div style="margin: 15px 0px;">
+<!-- <div style="margin: 15px 0px;">
 <a href="https://www.utilities-online.info/minify-css" style="text-decoration: underline !Important;">Minify CSS</a>
-</div>
-<div class="text-center">
+</div> -->
+<!-- <div class="text-center">
 <div id="home_middle_a" class="default_a" style="width: 200px;height: 200px;">
 </div>
-</div>
+</div> -->
 </div>
 <div class="col-sm-5" id="output-box">
 <div class="icons-main">
@@ -172,14 +172,14 @@
 <span><label style="color:#ffffff;opacity: 0.9;letter-spacing: 1.5px;left: 0px !important;">Output</label></span>
 </div>
 <div>
-<span class="textarea-buttons tooltip" onclick="save_file()">
+<!-- <span class="textarea-buttons tooltip" onclick="save_file()">
 <span class="tooltiptext">Download</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/save.svg?ver=1.1" />
 </span>
 <span class="textarea-buttons tooltip" onclick="copy_output()">
 <span class="tooltiptext copied">Copy</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/copy.svg" />
-</span>
+</span> -->
 <span class="textarea-buttons tooltip" onclick="deleteoutputdata()">
 <span class="tooltiptext">Clear</span>
 <img class="icons-img" data-src="https://www.utilities-online.info/imgs/erase.svg" />
@@ -236,7 +236,7 @@ function alert_box_close(){
 				.flex_utilities_tools{width: 92%;margin-top: 15px;}
 			}
 		</style>
-<div class="col-md-12 container flex_utilities">
+<!-- <div class="col-md-12 container flex_utilities">
 <div class="flex_utilities_content"><p>The CSS Beautifier helps you to beautify or format the CSS code with one click.<br /> It provides an option to properly format the minified CSS code to make it more readable.</p> <h2 id="how-to-use-css-formatter">How to use CSS Formatter?</h2> <p>To format CSS code online, follow the below steps:</p> <ol> <li>Write or paste the CSS Code in the input box.</li> <li>Click the &ldquo;Beautify CSS&rdquo; button.</li> </ol> <p>The editor will format the unreadable CSS files and make them easy to read in no time.</p> <h2 id="what-is-css">What is CSS?</h2> <p>Cascading Style Sheet &ldquo;CSS&rdquo; is the style sheet language widely used to describe the presentation of the document.</p> <p>It helps users to add different styles like fonts, colors, and spacing to a webpage.<br /> Our CSS beautifier helps designers and developers easily format their unreadable CSS files in no time.</p> <p><strong>Example:</strong></p> <p>If you enter the minified CSS code as:</p> <p>&ldquo;body{font-family:Arial, new Roman, serif;color:black;background-color:#d8da3d}h1{font-family:Helvetica, Cambria}&rdquo;</p> <p>The output will be:</p> <p><strong>body{<br /> &nbsp; &nbsp; font-family:Arial, new Roman, serif;<br /> &nbsp; &nbsp; color:black;<br /> &nbsp; &nbsp; background-color:#d8da3d<br /> }<br /> h1{<br /> &nbsp; &nbsp; font-family:Helvetica, Cambria<br /> }</strong></p> <h2 id="why-it-is-important-for-beautifying-code">Why it is important for beautifying code?</h2> <p>CSS style sheets include different basic properties to design a new webpage.</p> <p>These <a href="http://web.simmons.edu/~grabiner/comm244/weekthree/css-basic-properties.html" rel="nofollow" target="_blank">properties</a> include font size and style, text color, color, and other details.</p> <p>While designing or developing a site, the developers don&rsquo;t focus cleanliness of the CSS file.&nbsp;</p> <p>So, it is difficult to find sources that focus on the cleanliness of the code during the designing process.</p> <p>To deal with this, developers can use this online CSS beautifier to format and clean their code without any hurdle.</p> <p>It helps them to easily beautify their CSS file within a fraction of seconds.</p></div>
 <div class="flex_utilities_tools">
 <div class="flex_color">
@@ -287,7 +287,7 @@ function alert_box_close(){
 <div>
 <a href="https://www.utilities-online.info/blogs">Blogs</a> | <a href="https://www.utilities-online.info/contact">Contact Us</a> | <a href="https://www.utilities-online.info/faqs">FAQs</a> | <a href="https://www.utilities-online.info/privacy-policy">Privacy Policy</a>
 </div>
-</div>
+</div> -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190772945-1"></script>
 <script>
